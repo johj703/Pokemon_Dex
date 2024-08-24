@@ -1,14 +1,13 @@
-function PokemonCard({ pokemon, onAdd, onRemove, isSelected }) {
+function PokemonCard({ pokemon, addPokemon }) {
+  console.log("pokemon => ", pokemon);
   return (
-    <Card>
-      <img src={""} alt={""} />
-      <p>{pokemon.korean_name}</p>
-      {isSelected ? (
-        <Button onClick={() => {}}>삭제</Button>
-      ) : (
-        <Button onClick={() => {}}>추가</Button>
-      )}
-    </Card>
+    <div>
+      <img src={pokemon.img_url} />
+      <h2>{pokemon.korean_name}</h2>
+      <button type="button" onClick={() => addPokemon(pokemon)}>
+        추가
+      </button>
+    </div>
   );
 }
 
