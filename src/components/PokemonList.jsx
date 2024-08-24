@@ -1,15 +1,18 @@
-const PokemonList = ({ pokemonList, onAddPokemon }) => {
+import PokemonCard from "./PokemonCard";
+
+const PokemonList = ({ poketmonData, addPokemon }) => {
   return (
-    <ListContainer>
-      {pokemonList.map((pokemon) => (
-        <PokemonCard
-          key={pokemon.id}
-          pokemon={{}}
-          onAdd={() => {}}
-          isSelected={false}
-        />
-      ))}
-    </ListContainer>
+    <>
+      {poketmonData.map((pokemon) => {
+        return (
+          <PokemonCard
+            key={pokemon.id}
+            pokemon={pokemon}
+            addPokemon={addPokemon}
+          />
+        );
+      })}
+    </>
   );
 };
 
