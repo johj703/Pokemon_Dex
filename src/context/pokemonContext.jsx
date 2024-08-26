@@ -34,7 +34,7 @@ export function PokemonProvider({ children }) {
   const removePokemon = (pokemon) => {
     // 삭제할 때 상태값으로 저장된 배열을 다시 반환을 해야한다.
     // 삭제한 상태로 반환해야 한다!
-    selectedPokemonList(() => {
+    setSelectedPokemonList(() => {
       return selectedPokemonList.filter((list) => list.id !== pokemon.id);
     });
   };
