@@ -1,17 +1,19 @@
-const Dashboard = ({ selectedPokemon }) => {
+import PokemonCard from "./PokemonCard";
+
+const Dashboard = ({ selectPokemonList, removePokemon }) => {
   return (
-    <DashboardContainer>
-      <h2>대시보드</h2>
-      {selectedPokemon.length === 0 ? (
-        <p>선택된 포켓몬이 없습니다.</p>
-      ) : (
-        <ul>
-          {selectedPokemon.map((pokemon) => (
-            <li key={pokemon.id}>{pokemon.korean_name}</li>
-          ))}
-        </ul>
-      )}
-    </DashboardContainer>
+    <>
+      {selectPokemonList.map((pokemon) => {
+        return (
+          <PokemonCard
+            key={pokemon.id}
+            pokemon={pokemon}
+            removePokemon={removePokemon}
+            isSelect={true}
+          />
+        );
+      })}
+    </>
   );
 };
 
