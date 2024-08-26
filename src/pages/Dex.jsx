@@ -3,6 +3,7 @@ import { useState } from "react";
 import Dashboard from "../components/Dashboard";
 import PokemonList from "../components/PokemonList";
 import poketmonData from "../mock";
+import { PokemonContext } from "../constext/pokemonContext";
 
 const Dex = () => {
   // 선택한 데이터를 저장할 공간
@@ -44,12 +45,19 @@ const Dex = () => {
     <div>
       <h1>포켓몬 도감</h1>
       <p>여기에 포켓몬 리스트들이 표시 됩니다!</p>
-      <Dashboard
-        selectPokemonList={selectPokemonList}
-        removePokemon={removePokemon}
-      />
-      <hr />
-      <PokemonList poketmonData={poketmonData} addPokemon={addPokemon} />
+      <PokemonContext.Provider
+        value={{
+          selectedPokemon: selectPokemonList,
+          setSelectPokemonList: setSelectPokemonList,
+        }}
+      >
+        <Dashboard
+          selectPokemonList={selectPokemonList}
+          removePokemon={removePokemon}
+        />
+        <hr />
+        <PokemonList poketmonData={poketmonData} addPokemon={addPokemon} />
+      </PokemonContext.Provider>
     </div>
   );
 };
