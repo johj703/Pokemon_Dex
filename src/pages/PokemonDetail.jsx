@@ -4,7 +4,7 @@ import MOCK_DATA from "../mock";
 function PokemonDetail() {
   const navigate = useNavigate();
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   console.log(searchParams);
 
   const pokemonId = searchParams.get("id");
