@@ -1,5 +1,3 @@
-// import { useState } from "react";
-import { useState } from "react";
 import Dashboard from "../components/Dashboard";
 import PokemonList from "../components/PokemonList";
 import pokemonData from "../mock";
