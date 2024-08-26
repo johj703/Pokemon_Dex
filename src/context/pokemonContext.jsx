@@ -12,7 +12,7 @@ export function PokemonProvider({ children }) {
   const [selectedPokemonList, setSelectedPokemonList] = useState([]);
   const addPokemon = (pokemon) => {
     if (selectedPokemonList.length > 5) {
-      alert("최대 포켓몬은 6개 입니다.");
+      alert("최대 포켓몬은 6마리 입니다.");
       return;
     }
 
