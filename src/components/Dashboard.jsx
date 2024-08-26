@@ -1,16 +1,11 @@
 import PokemonCard from "./PokemonCard";
 
-const Dashboard = ({ selectPokemonList, removePokemon }) => {
+const Dashboard = ({ selectPokemonList }) => {
   return (
     <>
       {selectPokemonList.map((pokemon) => {
         return (
-          <PokemonCard
-            key={pokemon.id}
-            pokemon={pokemon}
-            removePokemon={removePokemon}
-            isSelect={true}
-          />
+          <PokemonCard key={pokemon.id} pokemon={pokemon} isSelect={true} />
         );
       })}
     </>
