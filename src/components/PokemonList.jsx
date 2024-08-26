@@ -9,6 +9,7 @@ const PokemonList = ({ poketmonData, addPokemon }) => {
             key={pokemon.id}
             pokemon={pokemon}
             addPokemon={addPokemon}
+            isSelect={false}
           />
         );
       })}
