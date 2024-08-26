@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Dashboard from "../components/Dashboard";
 import PokemonList from "../components/PokemonList";
-import poketmonData from "../mock";
+import pokemonData from "../mock";
 import { PokemonProvider } from "../context/pokemonContext";
 
 const Dex = () => {
@@ -51,7 +51,7 @@ const Dex = () => {
           removePokemon={removePokemon}
         />
         <hr />
-        <PokemonList poketmonData={poketmonData} addPokemon={addPokemon} />
+        <PokemonList pokemonData={pokemonData} addPokemon={addPokemon} />
       </PokemonProvider>
     </div>
   );

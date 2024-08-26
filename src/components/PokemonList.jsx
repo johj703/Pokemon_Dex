@@ -3,7 +3,7 @@ import PokemonCard from "./PokemonCard";
 import { useContext } from "react";
 import { PokemonContext } from "../context/pokemonContext";
 
-const PokemonList = ({ poketmonData, addPokemon }) => {
+const PokemonList = ({ pokemonData, addPokemon }) => {
   const navigate = useNavigate();
 
   const context = useContext(PokemonContext);
@@ -11,7 +11,7 @@ const PokemonList = ({ poketmonData, addPokemon }) => {
 
   return (
     <>
-      {poketmonData.map((pokemon) => {
+      {pokemonData.map((pokemon) => {
         return (
           <PokemonCard
             key={pokemon.id}
