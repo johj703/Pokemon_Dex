@@ -1,8 +1,17 @@
+import { useNavigate, useSearchParams } from "react-router-dom";
 import MOCK_DATA from "../mock";
 
 function PokemonDetail() {
-  const pokemonId = 1; // 포켓몬 ID 를 쿼리스트링으로부터 받아옵시다.
-  const pokemon = MOCK_DATA.find((p) => p.id === pokemonId);
+  const navigate = useNavigate();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  console.log(searchParams);
+
+  const pokemonId = searchParams.get("id");
+
+  const pokemon = MOCK_DATA.find((item) => item.id === pokemonId);
+
+  console.log(pokemonId);
 
   if (!pokemon) {
     return <div>포켓몬을 찾을 수 없습니다.</div>;
