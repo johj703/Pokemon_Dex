@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import PokemonCard from "./PokemonCard";
 
 const PokemonList = ({ poketmonData, addPokemon }) => {
+  const navigate = useNavigate();
   return (
     <>
       {poketmonData.map((pokemon) => {
@@ -10,6 +12,9 @@ const PokemonList = ({ poketmonData, addPokemon }) => {
             pokemon={pokemon}
             addPokemon={addPokemon}
             isSelect={false}
+            onClick={() => {
+              navigate(``);
+            }}
           />
         );
       })}
