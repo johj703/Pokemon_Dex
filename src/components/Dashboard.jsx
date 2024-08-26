@@ -1,16 +1,16 @@
+import { useContext } from "react";
 import PokemonCard from "./PokemonCard";
+import { PokemonContext } from "../context/pokemonContext";
 
-const Dashboard = ({ selectPokemonList, removePokemon }) => {
+const Dashboard = () => {
+  const { selectedPokemonList } = useContext(PokemonContext);
+
+  console.log(selectedPokemonList);
   return (
     <>
-      {selectPokemonList.map((pokemon) => {
+      {selectedPokemonList.map((pokemon) => {
         return (
-          <PokemonCard
-            key={pokemon.id}
-            pokemon={pokemon}
-            removePokemon={removePokemon}
-            isSelect={true}
-          />
+          <PokemonCard key={pokemon.id} pokemon={pokemon} isSelect={true} />
         );
       })}
     </>

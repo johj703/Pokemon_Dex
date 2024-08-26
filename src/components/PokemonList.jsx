@@ -1,16 +1,21 @@
 import { useNavigate } from "react-router-dom";
 import PokemonCard from "./PokemonCard";
+import { useContext } from "react";
+import { PokemonContext } from "../context/pokemonContext";
 
-const PokemonList = ({ poketmonData, addPokemon }) => {
+const PokemonList = ({ pokemonData }) => {
   const navigate = useNavigate();
+
+  // const context = useContext(PokemonContext);
+  // console.log(context);
+  console.log(pokemonData);
   return (
     <>
-      {poketmonData.map((pokemon) => {
+      {pokemonData.map((pokemon) => {
         return (
           <PokemonCard
             key={pokemon.id}
             pokemon={pokemon}
-            addPokemon={addPokemon}
             isSelect={false}
             onClick={() => {
               navigate(``);
