@@ -10,10 +10,10 @@ function PokemonCard({ pokemon, isSelect }) {
   const navigate = useNavigate();
 
   const context = useContext(PokemonContext);
-  console.log(context);
+  // console.log(context);
 
   const { addPokemon, removePokemon } = useContext(PokemonContext);
-  console.log(removePokemon);
+  // console.log(removePokemon);
 
   return (
     <Card>
