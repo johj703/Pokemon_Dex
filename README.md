@@ -7,7 +7,7 @@
 24.08.22(목요일)~24.08.27(화요일)
 
 ## 프로젝트 구조
-
+```md
 Pokemon_Dex
 ┣ .git
 ┣ node_modules
@@ -41,6 +41,7 @@ Pokemon_Dex
 ┣ README.md
 ┣ vite.config.js
 ┗ yarn.lock
+```
 
 ## 주요 기능
 
