@@ -1,9 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
 import { PokemonContext } from "../context/pokemonContext";
 import { useContext } from "react";
-
-const Card = styled.div``;
 
 function PokemonCard({ pokemon, isSelect }) {
   // console.log("pokemon => ", pokemon);
@@ -16,7 +13,7 @@ function PokemonCard({ pokemon, isSelect }) {
   // console.log(removePokemon);
 
   return (
-    <Card>
+    <div>
       <div
         onClick={() => {
           navigate(`/detail?id=${pokemon.id}`);
@@ -34,7 +31,7 @@ function PokemonCard({ pokemon, isSelect }) {
           추가
         </button>
       )}
-    </Card>
+    </div>
   );
 }
 
