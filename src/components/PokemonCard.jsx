@@ -1,6 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { PokemonContext } from "../context/pokemonContext";
 import { useContext } from "react";
+import styled from "styled-components";
+
+const PokemonCardWrapper = styled.div`
+  width: 96px;
+`;
 
 function PokemonCard({ pokemon, isSelect }) {
   // console.log("pokemon => ", pokemon);
@@ -13,7 +18,7 @@ function PokemonCard({ pokemon, isSelect }) {
   // console.log(removePokemon);
 
   return (
-    <div>
+    <PokemonCardWrapper>
       <div
         onClick={() => {
           navigate(`/detail?id=${pokemon.id}`);
@@ -31,7 +36,7 @@ function PokemonCard({ pokemon, isSelect }) {
           추가
         </button>
       )}
-    </div>
+    </PokemonCardWrapper>
   );
 }
 
