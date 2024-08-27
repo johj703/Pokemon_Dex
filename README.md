@@ -46,27 +46,27 @@ Pokemon_Dex
 
 ## 주요 기능
 
-![alt text](<src\assets\1. Pokemon Dex 대문.png>)
+![alt text](<src/assets/1. Pokemon Dex 대문.png>)
 
 1. Welcome to the Pokemon Dex 대문 페이지 - 프로젝트 첫 화면을 볼 수 있다.
 
-![alt text](<src\assets\2. Pokemon Dex 메인 페이지.png>)
+![alt text](<src/assets/2. Pokemon Dex 메인 페이지.png>)
 
 2. 포켓몬 Dex 페이지 - 전체 포켓몬들을 확인할 수 있다.
 
-![alt text](<src\assets\3. 포켓몬 선택 기능.png>)
+![alt text](<src/assets/3. 포켓몬 선택 기능.png>)
 
 3. 선택한 포켓몬들 리스트 - 추가 버튼을 클릭해서 6마리까지 선택할 수 있다.
 
-![alt text](<src\assets\4. 포켓몬 상세 정보.png>)
+![alt text](<src/assets/4. 포켓몬 상세 정보.png>)
 
 4. 포켓몬 상세 정보 - 포켓몬 한 마리를 클릭하면 해당 포켓몬의 상세 정보를 확인 할 수 있다. 뒤로가기 버튼을 클릭하면 포켓몬 리스트 페이지로 이동한다.
 
-![alt text](<src\assets\5. 포켓몬 중복 선택 금지 기능.png>)
+![alt text](<src/assets/5. 포켓몬 중복 선택 금지 기능.png>)
 
 5. 선택했던 포켓몬의 추가 버튼을 다시 클릭하면, "중복된 포켓몬이 있습니다." alert창이 뜬다.
 
-![alt text](<src\assets\6. 포켓몬 최대 선택 마리수 제한 기능.png>)
+![alt text](<src/assets/6. 포켓몬 최대 선택 마리수 제한 기능.png>)
 
 6. 최대로 선택할 수 있는 포켓몬들은 6마리다. 포켓몬을 7번째로 추가를 하면 "최대 포켓몬은 6마리 입니다." alert 창이 뜬다.
 
