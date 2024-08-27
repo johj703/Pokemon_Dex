@@ -5,6 +5,8 @@ import styled from "styled-components";
 
 const PokemonCardWrapper = styled.div`
   width: 96px;
+  border: 1px solid black;
+  padding-bottom: 5px;
 `;
 
 function PokemonCard({ pokemon, isSelect }) {
